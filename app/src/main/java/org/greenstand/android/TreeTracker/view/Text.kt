@@ -15,6 +15,7 @@
  */
 package org.greenstand.android.TreeTracker.view
 
+import androidx.camera.extensions.BuildConfig
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.BoxScope
@@ -25,6 +26,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -32,7 +34,6 @@ import androidx.compose.ui.unit.ExperimentalUnitApi
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.TextUnitType
 import androidx.compose.ui.unit.dp
-import org.greenstand.android.TreeTracker.BuildConfig
 import org.greenstand.android.TreeTracker.R
 import org.greenstand.android.TreeTracker.models.NavRoute
 import org.greenstand.android.TreeTracker.root.LocalNavHostController
@@ -51,11 +52,11 @@ object TextStyles {
 fun BoxScope.TopBarTitle() {
     val nav = LocalNavHostController.current
     Image(
-        painter = painterResource(id = R.drawable.greenstand_logo),
-        contentDescription = "Treetracker icon",
+        painter = painterResource(id = R.drawable.ftt_logo),
+        contentDescription = "FCC icon",
         modifier = Modifier
-            .height(100.dp)
-            .width(100.dp)
+            .height(120.dp)
+            .width(200.dp)
             .align(Alignment.Center)
             .padding(all = 15.dp).run {
                 if (BuildConfig.DEBUG) {
@@ -69,6 +70,7 @@ fun BoxScope.TopBarTitle() {
                 } else {
                     this
                 }
-            }
+            },
+        contentScale = ContentScale.Fit
     )
 }

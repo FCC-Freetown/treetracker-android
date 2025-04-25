@@ -297,7 +297,7 @@ fun <T : Credential> CredentialButton(
             .padding(end = 12.dp)
             .size(120.dp, 50.dp),
         onClick = onClick,
-        colors = AppButtonColors.ProgressGreen,
+        colors = AppButtonColors.FttAllBrown,
         isSelected = credentialType.isInstance(credential)
     ) {
         Text(
@@ -363,7 +363,7 @@ fun PrivacyPolicyDialog(
             verticalAlignment = Alignment.CenterVertically
         ) {
             Image(
-                painter = painterResource(id = R.drawable.greenstand_logo),
+                painter = painterResource(id = R.drawable.ftt_logo),
                 contentDescription = null,
                 modifier = Modifier
                     .size(width = 20.dp, height = 20.dp)

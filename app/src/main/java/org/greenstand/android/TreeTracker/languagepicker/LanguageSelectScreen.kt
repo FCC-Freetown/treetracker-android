@@ -108,7 +108,7 @@ fun LanguageButton(
     onClick: () -> Unit,
 ) {
     TreeTrackerButton(
-        colors = AppButtonColors.ProgressGreen,
+        colors = AppButtonColors.FttAllBrown,
         onClick = onClick,
         isSelected = isSelected,
         modifier = Modifier

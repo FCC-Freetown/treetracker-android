@@ -109,7 +109,6 @@ fun ChatScreen(
                 leftAction = {
                     ArrowButton(
                         isLeft = true,
-                        colors = AppButtonColors.MessagePurple,
                         onClick = {
                             navController.popBackStack()
                         }
