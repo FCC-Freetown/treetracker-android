@@ -72,7 +72,6 @@ fun IndividualMessageListScreen(
                     ArrowButton(
                         isLeft = false,
                         isEnabled = state.selectedMessage != null,
-                        colors = AppButtonColors.MessagePurple,
                         onClick = {
                             when (val msg = state.selectedMessage) {
                                 is DirectMessage -> navController.navigate(NavRoute.Chat.create(userId, msg.from))
@@ -85,7 +84,6 @@ fun IndividualMessageListScreen(
                 leftAction = {
                     ArrowButton(
                         isLeft = true,
-                        colors = AppButtonColors.MessagePurple,
                         onClick = {
                             navController.popBackStack()
                         }

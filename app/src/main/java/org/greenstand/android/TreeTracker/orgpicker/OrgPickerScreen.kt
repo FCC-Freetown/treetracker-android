@@ -106,7 +106,7 @@ fun OrgPickerScreen(viewModel: OrgPickerViewModel = viewModel(factory = LocalVie
 @Composable
 fun OrgItem(org: Org, isSelected: Boolean, onClick: () -> Unit) {
     TreeTrackerButton(
-        colors = AppButtonColors.ProgressGreen,
+        colors = AppButtonColors.FttAllBrown,
         onClick = onClick,
         isSelected = isSelected,
         modifier = Modifier
