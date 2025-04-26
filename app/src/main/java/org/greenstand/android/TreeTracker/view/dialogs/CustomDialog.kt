@@ -55,7 +55,7 @@ import org.greenstand.android.TreeTracker.view.ApprovalButton
  * @param textInputValue The text content of the dialog. Can be left empty if it is an input dialog
  */
 fun CustomDialog(
-    dialogIcon: Painter? = painterResource(id = R.drawable.greenstand_logo),
+    dialogIcon: Painter? = painterResource(id = R.drawable.ftt_logo),
     backgroundModifier: Modifier = Modifier,
     title: String = "",
     textContent: String? = null,

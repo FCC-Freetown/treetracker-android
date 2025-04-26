@@ -70,7 +70,6 @@ fun UserSelect(
                     ArrowButton(
                         isLeft = false,
                         isEnabled = state.selectedUser != null,
-                        colors = navigationButtonColors,
                         onClick = {
                             state.selectedUser?.let {
                                 onNavigateForward(it)
@@ -81,7 +80,6 @@ fun UserSelect(
                 leftAction = {
                     ArrowButton(
                         isLeft = true,
-                        colors = navigationButtonColors,
                         onClick = {
                             navController.navigate(NavRoute.Dashboard.route) {
                                 popUpTo(NavRoute.Dashboard.route) { inclusive = true }

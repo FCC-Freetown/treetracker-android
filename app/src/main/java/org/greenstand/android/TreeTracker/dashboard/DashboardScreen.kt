@@ -212,7 +212,7 @@ fun Dashboard(
                         .aspectRatio(1f)
                         .weight(1f),
                     text = stringResource(R.string.upload),
-                    colors = AppButtonColors.UploadOrange,
+                    colors = AppButtonColors.Yellow,
                     onClick = onSyncClicked,
                     shape = TreeTrackerButtonShape.Circle,
                     image = painterResource(id = R.drawable.upload_icon)
@@ -225,7 +225,7 @@ fun Dashboard(
                     .weight(1f)
                     .padding(horizontal = 20.dp, vertical = 10.dp)
                     .fillMaxSize(),
-                colors = AppButtonColors.MessagePurple,
+                colors = AppButtonColors.Yellow,
                 onClick = onMessagesClicked,
                 image = painterResource(id = R.drawable.announcement_icon),
                 showUnreadNotification = state.showUnreadMessageNotification
@@ -237,7 +237,7 @@ fun Dashboard(
                     .weight(1f)
                     .padding(horizontal = 20.dp, vertical = 10.dp)
                     .fillMaxSize(),
-                colors = AppButtonColors.ProgressGreen,
+                colors = AppButtonColors.FttAllBrown,
                 onClick = onCaptureClicked,
                 image = painterResource(id = R.drawable.track_icon)
             )

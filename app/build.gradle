@@ -20,11 +20,11 @@ loadExtraProperties("treetracker.keys.properties")
 android {
     compileSdkVersion 34
     defaultConfig {
-        applicationId "org.greenstand.android.TreeTracker"
+        applicationId "com.ftt.android.TreeTracker"
         minSdkVersion 21
         targetSdkVersion 34
         versionCode 196
-        versionName "2.1.1"
+        versionName "1.0.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
         buildConfigField "String", "OBJECT_STORAGE_IDENTITY_POOL_ID", "\"${s3_production_identity_pool_id}\""
@@ -107,7 +107,7 @@ android {
         }
 
         debug {
-            applicationIdSuffix ".debug"
+//            applicationIdSuffix ".debug"
             resValue "string", "app_name", "Tree Tracker(debug)"
             buildConfigField "String", "OBJECT_STORAGE_IDENTITY_POOL_ID", "\"${s3_test_identity_pool_id}\""
             buildConfigField 'String', 'OBJECT_STORAGE_BUCKET_IMAGES', '"treetracker-test-images"'
@@ -120,7 +120,7 @@ android {
         }
 
         beta {
-            applicationIdSuffix ".test"
+//            applicationIdSuffix ".test"
             resValue "string", "app_name", "Tree Tracker(test)"
             buildConfigField "String", "OBJECT_STORAGE_IDENTITY_POOL_ID", "\"${s3_test_identity_pool_id}\""
             buildConfigField 'String', 'OBJECT_STORAGE_BUCKET_IMAGES', '"treetracker-test-images"'
@@ -136,7 +136,7 @@ android {
 
         dev {
             initWith(debug)
-            applicationIdSuffix ".dev"
+//            applicationIdSuffix ".dev"
             resValue "string", "app_name", "Tree Tracker(dev)"
             buildConfigField "String", "OBJECT_STORAGE_IDENTITY_POOL_ID", "\"${s3_dev_identity_pool_id}\""
             buildConfigField 'String', 'OBJECT_STORAGE_BUCKET_IMAGES', '"treetracker-dev-images"'

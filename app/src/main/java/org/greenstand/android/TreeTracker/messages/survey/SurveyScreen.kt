@@ -70,7 +70,6 @@ fun SurveyScreen(
                 leftAction = {
                     ArrowButton(
                         isLeft = true,
-                        colors = AppButtonColors.MessagePurple,
                     ) {
                         if (!viewModel.goToPrevQuestion()) {
                             navController.popBackStack()
@@ -81,7 +80,6 @@ fun SurveyScreen(
                     ArrowButton(
                         isLeft = false,
                         isEnabled = state.selectedAnswerIndex != null,
-                        colors = AppButtonColors.MessagePurple,
                         onClick = {
                             scope.launch {
                                 if (!viewModel.goToNextQuestion()) {

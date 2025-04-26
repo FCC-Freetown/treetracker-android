@@ -33,6 +33,11 @@ object AppColors {
     val GrayShadow = Color.Black
 
     val LightGray = Color(0xFFD8D8D8)
+    val FttBrown = Color(0xFFC67712)
+    val FttBrownShadow = Color(0xFF8F520D)
+    val FttBrownDisabled = Color(0xAD8F520D)
+    val FttBrownShadowDisabled = Color(0xAA4A2B0A)
+
 
     val Green = Color(0xFF75B926)
     val GreenShadow = Color(0xFF507924)
@@ -87,6 +92,13 @@ object AppButtonColors {
         disabledColor = AppColors.GreenDisabled,
         disabledShadowColor = AppColors.GreenShadowDisabled
     )
+    val FttAllBrown = DepthButtonColors(
+        color = AppColors.FttBrown,
+        shadowColor = AppColors.FttBrownShadow,
+        disabledColor = AppColors.FttBrownDisabled,
+        disabledShadowColor = AppColors.FttBrownShadowDisabled
+    )
+
     val DeclineRed = DepthButtonColors(
         color = AppColors.Red,
         shadowColor = AppColors.RedShadow,
