@@ -80,10 +80,10 @@ import org.greenstand.android.TreeTracker.theme.CustomTheme
 @Composable
 fun BoxScope.ArrowButton(
     isEnabled: Boolean = true,
-    colors: ButtonColors = AppButtonColors.ProgressGreen,
     isLeft: Boolean,
     onClick: () -> Unit,
 ) {
+    val colors: ButtonColors = AppButtonColors.FttAllBrown
     TreeTrackerButton(
         isEnabled = isEnabled,
         colors = colors,
@@ -186,7 +186,7 @@ fun BoxScope.LanguageButton() {
         languageViewModel?.currentLanguage?.observeAsState(Language)?.value.toString()
 
     TreeTrackerButton(
-        colors = AppButtonColors.ProgressGreen,
+        colors = AppButtonColors.FttAllBrown,
         modifier = Modifier
             .align(Alignment.Center)
             .size(width = 100.dp, 60.dp),

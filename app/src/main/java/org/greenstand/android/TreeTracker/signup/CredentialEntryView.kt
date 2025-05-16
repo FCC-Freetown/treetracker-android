@@ -300,7 +300,7 @@ fun <T : Credential> CredentialButton(
             .padding(end = 12.dp)
             .size(120.dp, 50.dp),
         onClick = onClick,
-        colors = AppButtonColors.ProgressGreen,
+        colors = AppButtonColors.FttAllBrown,
         isSelected = credentialType.isInstance(credential)
     ) {
         Text(
@@ -332,7 +332,6 @@ fun ExistingUserDialog(
                     buttonColors = AppButtonColors.Default,
                     selectedColor = Green,
                     onClick = {
-
                         if(state.isTherePowerUser == false){
                             viewModel.setExistingUserAsPowerUser(user.id)
                             navController.navigate(NavRoute.Dashboard.route) {
@@ -348,6 +347,62 @@ fun ExistingUserDialog(
             }
         }
     )
+}
+
+@Composable
+fun PrivacyPolicyDialog(
+    viewModel: SignupViewModel,
+) {
+    Column(
+        modifier = Modifier
+            .padding(start = 30.dp, end = 30.dp, top = 10.dp, bottom = 40.dp)
+            .fillMaxSize()
+            .padding(2.dp)
+            .border(1.dp, color = Green, shape = RoundedCornerShape(percent = 10))
+            .clip(RoundedCornerShape(percent = 10))
+            .background(color = AppColors.Gray)
+            .padding(10.dp),
+    ) {
+        Row(
+            modifier = Modifier
+                .weight(0.8f)
+                .fillMaxWidth()
+                .padding(bottom = 4.dp),
+            horizontalArrangement = Arrangement.Start,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Image(
+                painter = painterResource(id = R.drawable.ftt_logo),
+                contentDescription = null,
+                modifier = Modifier
+                    .size(width = 20.dp, height = 20.dp)
+            )
+            Spacer(modifier = Modifier.width(5.dp))
+            Text(
+                text = stringResource(R.string.privacy_policy),
+                color = CustomTheme.textColors.primaryText,
+                style = CustomTheme.typography.large,
+                fontWeight = FontWeight.Bold,
+            )
+        }
+        Text(
+            text = stringResource(id = R.string.policy_text_blob),
+            modifier = Modifier
+                .padding(bottom = 15.dp)
+                .weight(9f)
+                .verticalScroll(rememberScrollState())
+        )
+        ApprovalButton(
+            modifier = Modifier
+                .weight(0.8f)
+                .size(50.dp)
+                .align(CenterHorizontally),
+            onClick = {
+                viewModel.closePrivacyPolicyDialog()
+            },
+            approval = true
+        )
+    }
 }
 
 @Preview

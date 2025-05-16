@@ -75,7 +75,6 @@ fun TreeHeightScreen() {
                     ArrowButton(
                         isLeft = false,
                         isEnabled = state.selectedColor != null,
-                        colors = AppButtonColors.ProgressGreen,
                         onClick = {
                             state.selectedColor?.let {
                                 CaptureFlowScopeManager.nav.navForward(navController)

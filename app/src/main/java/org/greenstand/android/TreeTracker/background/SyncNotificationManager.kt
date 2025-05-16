@@ -42,7 +42,7 @@ class SyncNotificationManager(
             .createCancelPendingIntent(workerId)
 
         val builder = NotificationCompat.Builder(applicationContext, SYNC_CHANNEL_ID)
-            .setSmallIcon(R.drawable.greenstand_logo)
+            .setSmallIcon(R.drawable.ftt_logo)
             .setContentTitle(applicationContext.getString(R.string.syncing))
             .setContentText(applicationContext.getString(R.string.uploading_trees))
             .setPriority(NotificationCompat.PRIORITY_LOW)
