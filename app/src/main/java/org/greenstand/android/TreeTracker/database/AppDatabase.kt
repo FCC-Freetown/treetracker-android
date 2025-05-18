@@ -83,6 +83,6 @@ abstract class AppDatabase : RoomDatabase() {
             return INSTANCE!!
         }
 
-        private const val DB_NAME = "treetracker.v2.db"
+        private const val DB_NAME = "ftt-treetracker.v2.db"
     }
 }
