@@ -88,7 +88,7 @@ fun SplashScreen(
     }
 
     Image(
-        painter = painterResource(id = R.drawable.splash),
+        painter = painterResource(id = R.drawable.ftt_spash_background),
         contentDescription = null,
         contentScale = ContentScale.Crop,
         modifier = Modifier.fillMaxSize()
